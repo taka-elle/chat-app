@@ -8,5 +8,5 @@ class User < ApplicationRecord
   # １userは複数の中間テーブルを持っている
   has_many :room_users
   # １userは複数のroomsテーブルをもっている
-  has_many :rooms, through: room_users
+  has_many :rooms, through: :room_users
 end
