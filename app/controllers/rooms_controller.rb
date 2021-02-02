@@ -1,4 +1,8 @@
 class RoomsController < ApplicationController
+  
+  def index
+    
+  end
   def new
     # これに入れてねっていう空の変数を定義
     @room = Room.new
