@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   root to: "messages#index"
   # ７つのアクションのルーティングを一気に生成
   resources :users,only:[:edit,:update]
+  resources :rooms,only:[:new,:create]
 end
