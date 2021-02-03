@@ -2,12 +2,12 @@
   <div class="upper-message">
     <div class="message-user">
       <!-- 投稿したユーザー名情報を出力する -->
-      <%# モデル名.user.name %>
+      <%# collectionで@messagesが繰り返し処理されているので部分テンプレート先でmessageという変数が使える %>
       <%= message.user.name%>
     </div>
     <div class="message-date">
       <!-- 投稿した時刻を出力する -->
-      <%= message.created_at%>
+      <%= l message.created_at%>
     </div>
   </div>
   <div class="lower-message">
