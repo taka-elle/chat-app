@@ -22,6 +22,7 @@ RSpec.describe Message, type: :model do
 
     it 'contentとimageが空では保存できないこと' do
       @message.content=""
+      # imageは文字列ではないためnil
       @message.image=nil
       @message.valid?
       expect(@message.errors.full_messages).to include "Content can't be blank"
@@ -40,3 +41,4 @@ RSpec.describe Message, type: :model do
     end
   end
 end
+
